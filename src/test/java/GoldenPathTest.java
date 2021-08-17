@@ -4,10 +4,20 @@ import org.testng.annotations.Test;
 public class GoldenPathTest extends GoldenPath {
 
     @Test
-    public void test() {
+    public void test() { //name for test -- should by 1 item
         openBrowser();
         singIn();
         buyTShirt();
-        verifyPurchase();
+        verifyPurchase(); //here should be assert
+
+
+
+//        @Test 2
+//        public void test() { should remove 1 item
+//            openBrowser();
+//            singIn();
+//            buyTShirt();
+//            removePurshaseFromBag(); this will incude -- removeItem(); verifyThatCartIsEmpty(); you have them      
+//            verifyPurchase(); //here should be assert -- with empty bag 
     }
 }

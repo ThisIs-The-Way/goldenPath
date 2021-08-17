@@ -11,7 +11,6 @@ public class GoldenPathBase {
         driver.get("https://www.shirtspace.com/t-shirts");
     }
 
-
     @AfterClass
     public void closeBrowser() {
         driver.manage().deleteAllCookies();
