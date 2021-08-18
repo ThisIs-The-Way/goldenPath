@@ -8,7 +8,7 @@ public class GoldenPath extends GoldenPathBase{
         new WebDriverWait(driver, 20)
                 .until(ExpectedConditions.visibilityOfElementLocated
                         (By.xpath("//a[contains(text(),'Gildan G200 Adult Ultra Cotton® 6 oz. T-Shirt–Blac')]")));
-        // accert Expected and Actual                 
+    // accert Expected and Actual                 
         removeItem();
         verifyThatCartIsEmpty();
     }
