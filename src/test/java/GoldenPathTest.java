@@ -1,28 +1,26 @@
 import org.testng.annotations.Test;
-
+//1. Sing In and verify
+//2. Add item to the cart and verify purchase
+//3. Delete item from the card and verify that card is empty
 
 public class GoldenPathTest extends GoldenPath {
 
-    @Test
-    public void test() { //name for test -- should by 1 item
-        openBrowser();
+    @Test //1. Sing In and verify
+    public void test1(){
         singIn();
+        verifyAction();
+    }
+
+
+    @Test //2. Add item to the card and verify purchase
+    public void test2(){
         buyTShirt();
-        verifyPurchase(); //here should be assert
+        verifyPurchase();
+    }
 
-/*
-        @Test 2        
-        public void test() { should remove 1 item            
-            openBrowser();            
-            singIn();           
-            buyTShirt();            
-            removePurshaseFromBag(); this will incude -- removeItem(); verifyThatCartIsEmpty(); you have them      
-           verifyPurchase(); //here should be assert -- with empty bag 
-        
-        @Test 3
-        should test diff type of users
-
-
-           */
+    @Test //3. Delete item from the card and verify that card is empty
+    public void test3(){
+        removeItem();
+        verifyThatCartIsEmpty();
     }
 }
