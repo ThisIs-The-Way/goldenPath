@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,8 +17,11 @@ public class GoldenPathBase {
 
     @BeforeTest
     public void openBrowser() {
-        driver = new FirefoxDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        //driver = new FirefoxDriver();
         driver.get("https://www.shirtspace.com/t-shirts");
+        driver.manage().window().maximize();
     }
 
     @AfterClass
